@@ -44,16 +44,26 @@ Siga estos pasos para instalar y ejecutar el proyecto localmente:
     ```proweshell
     npm run generate-log
     ```
-
+    <div align="center">
+    <img src="./src/assets/img/Log-de-errores.png" alt="Login" width="450" />
+    </div>
 - Practica 4: Formateo de facturas.
     ```proweshell
     npm run amount-bills
     ```
-
+    <div align="center">
+    <img src="./src/assets/img/Factura-1.png" alt="Login" width="450" />
+    </div>
+    <div align="center">
+    <img src="./src/assets/img/Factura-2.png" alt="Login" width="450" />
+    </div>
 - Practica 6: Determinación de factorial de un numero.
     ```proweshell
     npm run factorial
     ```
+    <div align="center">
+    <img src="./src/assets/img/factorial.png" alt="Login" width="450" />
+    </div>
 ## **Contacto**
 
 Si tienes alguna pregunta o comentario, no dudes en contactarme 🙋🏻‍♂️:
