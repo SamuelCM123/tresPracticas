@@ -22,19 +22,35 @@ Siga estos pasos para instalar y ejecutar el proyecto localmente:
 
     > **NOTA**: Se recomienda, que se utilice **[Visual Studio Code](https://code.visualstudio.com/download)**.
 
+    > **NOTA**: En caso de no contar con la instalación de Node.js acceda al siguiente enlace **[NODE.JS](https://nodejs.org/es)**, y con el siguiente comando podra determinar si se hizo la instalación correcta:
+
+    Muestra las versiones de las tecnologias instaladas:
+    ```proweshell
+        npm -v 
+        node -v
+    ```
+
+    
+
+    > **NOTA**: En caso de no contar con la instalación de `NODEMON`, sera necesario realizar la instalación nodemon y se puede realizar ingresando el siguiente comando(**Es necesario contar con la instalación de NODE.JS**):
+
+    ```proweshell
+    npm install nodemon
+    ```
+
 3. Abrir terminal y escribir alguno de los siguientes 3 comandos:
 
-Practica 3: Log de errores.
+- Practica 3: Log de errores.
     ```proweshell
     npm run generate-log
     ```
 
-Practica 4: Formateo de facturas.
+- Practica 4: Formateo de facturas.
     ```proweshell
     npm run generate-log
     ```
 
-Practica 6: Determinación de factorial de un numero.
+- Practica 6: Determinación de factorial de un numero.
     ```proweshell
     npm run generate-log
     ```
