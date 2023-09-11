@@ -47,12 +47,12 @@ Siga estos pasos para instalar y ejecutar el proyecto localmente:
 
 - Practica 4: Formateo de facturas.
     ```proweshell
-    npm run generate-log
+    npm run amount-bills
     ```
 
 - Practica 6: Determinación de factorial de un numero.
     ```proweshell
-    npm run generate-log
+    npm run factorial
     ```
 ## **Contacto**
 
