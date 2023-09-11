@@ -1,0 +1,17 @@
+{
+  "name": "practica-4-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-log": "node ./src/Ejercicio3/index.js",
+    "amount-bills": "nodemon ./src/Ejercicio4/index.js",
+    "factorial": "nodemon ./src/Ejercicio6/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Calderon",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
