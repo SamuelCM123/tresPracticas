@@ -7,6 +7,7 @@
     "generate-log": "node ./src/Ejercicio3/index.js",
     "amount-bills": "nodemon ./src/Ejercicio4/index.js",
     "factorial": "nodemon ./src/Ejercicio6/index.js",
+    "prueba": "nodemon ./src/Prueba/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Samuel Calderon",

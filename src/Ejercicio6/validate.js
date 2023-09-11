@@ -1,7 +1,7 @@
 /**
- * Valida que el tipo de dato el correspondiente para determinar su factorial.
- * @param {Number} num Guarda el dato a validar.
- * @returns {Boolean} Returna la respuesta de la validación.
+ * Determina si el numero es el indicado para realizar el proceso para conseguir su factorial.
+ * @param {Number} num Numero a validar.
+ * @returns {Boolean}   Returna la respuesta de la validación.
  */
 const validarNumero = (num) => {
     if (num === '' || num === null || num === undefined) {

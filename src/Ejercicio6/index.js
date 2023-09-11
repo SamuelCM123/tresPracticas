@@ -1,11 +1,12 @@
-const {validarNumero} = require('./validate')
+const { validarNumero } = require('./validate')
 
 /**
  * Almacena numero entero al cual se le determinara su factorial.
  * @type {Number}
  */
 let numero = 5;
-console.log("NUMERO:",numero);
+console.log("NUMERO:", numero);
+
 /**
  * Acumula las diferentes multiplicaciones para determinar el factorial
  * @type {Number}
@@ -38,18 +39,11 @@ const factorial = () => {
             console.log(suma);
             bandera++;
         }
-        console.log("Factorial",suma);
+        console.log("Factorial", suma);
     }
     else {
         console.log(validacion[1]);
     }
-    // }
 }
-
-/**
- * Determina si el numero es el indicado para realizar el proceso para conseguir su factorial.
- * @param {Number} num Numero a validar.
- * @returns {Boolean}
- */
 
 factorial()

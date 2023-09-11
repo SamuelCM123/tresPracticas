@@ -18,8 +18,6 @@ let objectTimbradas = [];
  */
 let objectCanceled = [];
 
-
-
 /**
  * Esta funcion separa las facturas timbradas y las canceladas.
  * @param {Object} billsArray El array de objetos de las facturas. 
@@ -27,11 +25,11 @@ let objectCanceled = [];
 const bills = (billsArray) => {
     billsArray.forEach(bill => {
         // Facturas canceladas
-        if(bill.total === null){
+        if (bill.total === null) {
             objectCanceled.push(bill);
         }
         // Facturas timbradas
-        else{
+        else {
             objectTimbradas.push(bill);
             total += bill.total;
         }
@@ -48,8 +46,8 @@ const bills = (billsArray) => {
      * @type {String} 
      */
     let formatTotal = ` ${totalImport.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
-    showGoodBill(objectTimbradas,formatTotal);
-    showBillCanceled(objectCanceled);
+    goodBill(objectTimbradas, formatTotal);
+    canceledBill(objectCanceled);
 }
 
 /**
@@ -57,53 +55,46 @@ const bills = (billsArray) => {
  * @param {Object} goodbill El array de objetos de las facturas timbradas.
  * @param {String} total El formateo de la suma del total de las facturas timbradas.
  */
-const showGoodBill = (goodbill,total) => {
+const goodBill = (goodbill, total) => {
     console.log(`FACTURAS TIMBRADAS ${goodbill.length}`);
     goodbill.forEach(bill => {
-        /**
-         * Objeto con fecha y total importe de cada factura formateado.
-         * @type {Object}
-         */
-        let dateNew = formatDateAndImport(bill);
-
-        console.log(`ID: ${bill.id}`);
-        console.log(`Date: ${dateNew[1]}`);  
-        console.log(`Serie & Folio: ${bill.serie}-${bill.folio}`);
-        console.log(`UUID: ${bill.uuid}`);
-        console.log(`Total: $${dateNew[0]}`);
-        console.log(`Status: FACTURADO`);
-        
-        
-        console.log("\n");
+        showBills(bill, "Timbrada")
     })
-    console.log("TOTAL DE IMPORTE: "+"$"+total);
+    console.log("TOTAL DE IMPORTE: " + "$" + total);
     console.log("\n");
 }
-
 
 /**
  * Muestra las facturas canceladas formateadas con sus respectivos datos.
  * @param {Object} badbill El array de objetos de las facturas canceladas.
  */
-const showBillCanceled = (badbill) => {
+const canceledBill = (badbill) => {
     console.log(`FACTURAS CANCELADAS ${badbill.length}`);
     badbill.forEach(bill => {
-        /**
-         * Objeto con fecha formateada.
-         * @type {Object}
-         */
-        let dateNew = formatDateAndImport(bill)[1];
-
-        console.log(`ID: ${bill.id}`);
-        console.log(`Date: ${dateNew}`);  
-        console.log(`Serie & Folio: ${bill.serie}-${bill.folio}`);
-        console.log(`UUID: ${bill.uuid}`);
-        console.log(`Total: null`);
-        console.log(`Status: CANCELADO`);
-        
-        
-        console.log("\n");
+        showBills(bill, "Cancelada")
     })
+}
+
+/**
+ * 
+ * @param {Object} bill Factura individual para formatear
+ * @param {String} typeBill Guarda el tipo de factura que es para filtrarlo cuando se muestre
+ */
+const showBills = (bill, typeBill) => {
+    /**
+    * Objeto con fecha y total importe de cada factura formateado.
+    * @type {Object}
+    */
+    let dateNew = typeBill === 'Timbrada' ? formatDateAndImport(bill) : formatDateAndImport(bill)[1]
+
+    console.log(`ID: ${bill.id}`);
+    console.log(`Date: ${typeBill === 'Timbrada' ? dateNew[1] : dateNew}`);
+    console.log(`Serie & Folio: ${bill.serie}-${bill.folio}`);
+    console.log(`UUID: ${bill.uuid}`);
+    console.log(`Total: ${typeBill === 'Timbrada' ? '$' + dateNew[0] : 'null'}`);
+    console.log(`Status: ${typeBill === 'Timbrada' ? 'FACTURADO' : 'CANCELADO'}`);
+
+    console.log("\n");
 }
 
 bills(billsArray);
