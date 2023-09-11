@@ -105,7 +105,7 @@ const generarLog = (registerError, objectDate) => {
      * Guarda ruta y concatenacion del nombre del archivo.
      * @type {String} 
      */
-    const pathFile = `./src/Ejercicio3/logs/logs_${objectDate.year + "" + objectDate.month + "" + objectDate.day}.json`;
+    let pathFile = `./src/Ejercicio3/logs/logs_${objectDate.year + "" + objectDate.month + "" + objectDate.day}.json`;
     
     // Si existe el archivo .json insertar el objeto en el array de objetos
     if(fs.existsSync(pathFile)){
