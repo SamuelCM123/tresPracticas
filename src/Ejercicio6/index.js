@@ -5,7 +5,7 @@ const {validarNumero} = require('./validate')
  * @type {Number}
  */
 let numero = 5;
-
+console.log("NUMERO:",numero);
 /**
  * Acumula las diferentes multiplicaciones para determinar el factorial
  * @type {Number}
@@ -38,6 +38,7 @@ const factorial = () => {
             console.log(suma);
             bandera++;
         }
+        console.log("Factorial",suma);
     }
     else {
         console.log(validacion[1]);
