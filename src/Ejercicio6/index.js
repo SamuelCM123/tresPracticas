@@ -4,6 +4,7 @@ const { validarNumero } = require('./validate')
  * Almacena numero entero al cual se le determinara su factorial.
  * @type {Number}
  */
+// let numero = 8;
 let numero = 5;
 console.log("NUMERO:", numero);
 

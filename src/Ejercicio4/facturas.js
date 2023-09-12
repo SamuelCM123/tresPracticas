@@ -1,4 +1,4 @@
-facturas = [
+const billsArray = [
     {
         id: '0b060d19-98e5-41f0-9519-0cee41af9055',
         date: '2023-01-11T00:00:00.000Z',
@@ -91,6 +91,6 @@ facturas = [
     }
 ]
 
-module.exports ={
-    billsArray: facturas
+module.exports = {
+    billsArray
 }

@@ -56,7 +56,7 @@ const bills = (billsArray) => {
  * @param {String} total El formateo de la suma del total de las facturas timbradas.
  */
 const goodBill = (goodbill, total) => {
-    console.log(`FACTURAS TIMBRADAS ${goodbill.length}`);
+    console.log(`FACTURAS TIMBRADAS: ${goodbill.length}`);
     goodbill.forEach(bill => {
         showBills(bill, "Timbrada")
     })
@@ -69,7 +69,7 @@ const goodBill = (goodbill, total) => {
  * @param {Object} badbill El array de objetos de las facturas canceladas.
  */
 const canceledBill = (badbill) => {
-    console.log(`FACTURAS CANCELADAS ${badbill.length}`);
+    console.log(`FACTURAS CANCELADAS: ${badbill.length}`);
     badbill.forEach(bill => {
         showBills(bill, "Cancelada")
     })
